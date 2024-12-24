@@ -72,6 +72,9 @@ function volverAlHome() {
 const audioButton = document.getElementById('audio-button');
 const audio = document.getElementById('audio');
 
+// Establecer la música para que empiece desde el segundo 10
+audio.currentTime = 10;
+
 // Cambiar texto y funcionalidad del botón
 audioButton.addEventListener('click', function() {
   if (audio.paused) {
