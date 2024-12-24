@@ -41,7 +41,8 @@ function abrirModal(carpeta) {
     ],
     videos: [
       'https://Jhosep24.github.io/Kiara24Jhosep/img/video.mp4',
-    'https://Jhosep24.github.io/Kiara24Jhosep/img/video2.mp4'
+    'https://Jhosep24.github.io/Kiara24Jhosep/img/video2.mp4',
+      'https://Jhosep24.github.io/Kiara24Jhosep/img/video3.mp4'
     ]
   };
 
