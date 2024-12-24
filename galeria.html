@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>galeria 💖</title>
+    <link rel="stylesheet" href="css/galeria.css">
+</head>
+<body>
+
+    <h2 class="titulo-galeria">Tesoros de Nuestro Amor 💖💖</h2>
+    <p class="subtitulo-galeria">Eres la luz de mi vida, la razón de mi sonrisa y el latido más fuerte de mi corazón. Todo en ti es pura magia, y cada día a tu lado es el más hermoso regalo. Te amo con todo mi ser, mi princesa.🌹✨</p>
+    
+    <div class="galeria-container">
+      <!-- Carpeta Fotos -->
+      <div class="foto-item" onclick="abrirModal('fotos')">
+        <img src="img/foto1.jpeg" alt="Carpeta Fotos" class="foto">
+        <p class="leyenda">Ver nuestras fotos llenas de momentos especiales</p>
+      </div>
+      <!-- Carpeta Videos -->
+      <div class="foto-item" onclick="abrirModal('videos')">
+        <img src="img/foto2.jpeg" alt="Carpeta Videos" class="foto">
+        <p class="leyenda">Ver nuestros videos llenos de amor y risas</p>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="cerrarModal()">&times;</span>
+        <div id="modal-body"></div>
+        <div id="video-player-container" class="video-player-container" style="display: none;">
+          <video id="video-player" controls></video>
+          <button class="btn-regresar" onclick="cerrarVideo()">Regresar</button>
+        </div>
+      </div>
+    </div>
+    <div class="boton-volver">
+      <button id="volverHome" onclick="volverAlHome()">Regresar 🏡</button>
+    </div>
+
+    <div class="frase-romantica">
+      <p class="mensaje-romantico">
+        "Mi amor, cada recuerdo que compartimos es un pedacito del paraíso que construimos juntos. Cada momento contigo es único e inigualable. Te amo más allá de las estrellas. 🌌❤️"
+      </p>
+    </div>
+    
+    
+
+    <script src="js/galeria.js"></script>
+</body>
+</html>

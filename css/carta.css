@@ -1,0 +1,369 @@
+/* General */
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #d16ba5, #86a8e7, #5ffbf1);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Cambiado para evitar que se centre el body */
+   
+    flex-direction: column; /* Asegura que el contenido se apile verticalmente */
+    overflow-y: auto; /* Permite el desplazamiento */
+}
+
+/* reset css */
+
+
+  
+ 
+  
+ 
+  main {
+    display: flex;
+    flex-direction: column;
+  
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+/* La carta */
+.container-letter {
+  position: relative;
+}
+  
+  .cover {
+    position: absolute;
+    border-left: 200px solid transparent;
+    border-right: 200px solid transparent;
+    border-top: 100px solid #fe3334;
+    border-bottom: 100px solid transparent;
+  
+    /*  */
+    transition: transform .75s;
+    transform-origin: top;
+  }
+  
+/* Ocultar el contenido de la carta al principio */
+.paper {
+    position: absolute;
+    padding: 1.5rem;
+    line-height: 2rem;
+    right: 5px;
+    z-index: -1;
+    background: rgb(213, 236, 255);
+    width: 390px;
+    height: 180px;
+    opacity: 0; /* Ocultar el contenido al principio */
+    overflow-y: auto; /* Habilitar la barra de desplazamiento vertical */
+    transition: all .75s;
+    top: -40px;
+    border-radius: 15px; /* Bordes redondeados */
+    
+  }
+  
+  /* Mostrar el contenido y permitir desplazamiento después de abrir */
+  .open-paper {
+    opacity: 1; /* Hacer visible el contenido */
+    z-index: 1; /* Traer el contenido encima de la carta */
+    overflow-y: auto; /* Asegurarse de que la barra de desplazamiento esté disponible */
+  }
+  
+  
+  .letter {
+    border-left: 200px solid #ff989e;
+    border-right: 200px solid #ff989e;
+    border-top: 100px solid transparent;
+    border-bottom: 100px solid #ff858a;
+  }
+  
+  .options {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  
+    & button {
+      color: #ff3234;
+      font-weight: 600;
+      border-radius: 3px;
+      background: #fad7df;
+      padding: 0.5rem 1rem;
+      border: 1px solid #fe3334;
+      cursor: pointer;
+      margin-bottom: 5px;
+    }
+  
+    & button:hover {
+      background: #ff989e;
+      color: white;
+    }
+   
+  }
+  
+  .open-cover {
+    transform: rotatex(180deg);
+  }
+  
+.open-paper {
+  animation: openPaper .5s forwards;
+  overflow-y: auto; /* Asegurarse de que la barra de desplazamiento esté disponible */
+}
+  
+  
+.letter-title {
+  font-size: 32px;
+  color: #d04e72;
+  font-family: 'Brush Script MT', cursive;
+  text-align: center; /* Alinea el texto al centro */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  margin: 0; /* Elimina márgenes innecesarios */
+  padding: 0 10px; /* Añade un poco de espacio de relleno en los lados */
+}
+  
+  
+  @keyframes openPaper {
+    0% {
+      top: 0;
+    }
+    100% {
+      top: -120px;
+    }
+  }
+  
+  .close-paper {
+    animation: closePaper .5s forwards;
+  }
+  
+  @keyframes closePaper {
+    0% {
+      top: -120px;
+    }
+    100% {
+      top: 0;
+    }
+  }
+  
+  
+  .heart {
+    display: none;
+    position: absolute;
+    top: 25%;
+    left: 46.5%;
+    margin: auto;
+    font-size: 3rem;
+  
+    color: #fe3334;
+  
+    animation: crecer 1s forwards ;
+  }
+  
+  @keyframes crecer {
+    0% {
+      scale: 1;
+      opacity: 1;
+    }
+    100% {
+      scale: 3;
+      opacity: 0;
+  
+    }
+  }
+ /*carta  */
+ #message {
+  text-align: center; /* Centra el texto */
+  margin-bottom: 5px; /* Espacio debajo del título */
+  max-width: 80%;
+}
+
+#message h1 {
+  font-size: 1.4rem; /* Tamaño de la fuente */
+  text-align: center; /* Alinear el texto al centro */
+  font-weight: 600; /* Grosor de la fuente */
+  animation: palpitation 2s ease-in-out infinite; /* Añadir animación de palpitar */
+  line-height: 4rem; /* Altura de línea para un mejor espaciado */
+  color: #FF1493; /* Color de la fuente */
+  margin-top: 5px;
+  max-width: 90%;
+}
+
+/* Definición de la animación de palpitar */
+@keyframes palpitation {
+  0%, 100% {
+      transform: scale(1); /* Tamaño original */
+  }
+  50% {
+      transform: scale(1.1); /* Aumenta el tamaño para el efecto de palpitar */
+  }
+}
+
+
+/* Animación de texto */
+.pre-message {
+    font-size: 2rem;
+    text-align: center;
+    color: #b700ff88;
+    font-weight: bold;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    margin-bottom: 10px;
+    max-width: 80%;
+    margin-top: 5px;
+    background-color: #838383;
+   
+    margin-right: 30px;
+   
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  /* Estilo del botón de abrir */
+  #open {
+    background-color: #ff3234;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  #open:hover {
+    background-color: #ff989e;
+  }
+
+/* Estilo del botón para la música */
+.audio-container {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .audio-button {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    background-color: #FF1493;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .audio-button span {
+    font-size: 1.5rem;
+  }
+  
+  /* Efecto de animación para el botón */
+  .audio-button:hover {
+    transform: scale(1.1); /* Aumentar tamaño al pasar el ratón */
+    background-color: #ff328b; /* Color más oscuro */
+  }
+  
+  .audio-button:active {
+    transform: scale(0.9); /* Reducir tamaño al hacer clic */
+  }
+  
+  .audio-button::after {
+    content: " 🎵";
+  }
+
+
+  .image-gallery {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las imágenes se ajusten en pantallas pequeñas */
+    justify-content: center;
+    gap: 20px; /* Espacio entre las imágenes */
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .image-container {
+    flex: 1 1 calc(50% - 20px); /* Dos columnas en pantallas grandes */
+    max-width: calc(50% - 20px);
+    border: 5px solid #ffd1dc; /* Borde rosa suave */
+    border-radius: 15px;
+    overflow: hidden; /* Recorta bordes redondeados */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .gallery-image {
+    width: 100%;
+    height: 220px;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  
+  .image-container:hover .gallery-image {
+    transform: scale(1.05); /* Zoom suave al pasar el cursor */
+  }
+  
+
+  
+  /* Media Query para pantallas de 480px */
+/* Responsive 480px */
+/* Responsive 480px */
+@media (max-width: 480px) {
+  .gallery-image{
+    width: 100%;
+    height: 165px;
+
+   
+  }
+  .image-gallery{
+    margin-right: 40px;
+
+  }
+
+  .pre-message p {
+      font-size: 0.9rem;
+  }
+
+  .letter-title {
+    font-size: 32px;
+    color: #d04e72;
+    font-family: 'Brush Script MT', cursive;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    justify-content: center;
+  }
+  
+
+  .paper {
+      font-size: 0.9rem;
+      max-width: 70%;
+      color: #6a1b9a;
+      margin-left: 80px;
+      margin-right: 50px;
+      line-height: 1.8;
+  font-family: 'Georgia', serif;
+  text-align: justify;
+  }
+
+  button {
+      font-size: 0.9rem;
+      padding: 8px 12px;
+  }
+  .heart {
+    font-size: 2rem; /* Reducir tamaño del corazón */
+}
+  .audio-button {
+      font-size: 0.9rem;
+      padding: 8px 12px;
+  }
+  .tit{
+    font-size: 0.2rem;
+  }
+}
+/* Responsive 760px */

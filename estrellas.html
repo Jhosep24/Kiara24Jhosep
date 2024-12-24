@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estrella de Deseos 💖</title>
+  <link rel="stylesheet" href="css/estrellas.css">
+</head>
+<body>
+
+  <!-- Título con animación -->
+  <div class="header">
+    <h1 class="animated-title">Mi cielo, eres mi estrella</h1>
+    <p class="subtitle">Cierra los ojos, haz un deseo y siente mi amor en cada estrella</p>
+  </div>
+
+  <div class="indicaciones">
+    <p class="frase-interactiva">
+      "Toca cada estrella para descubrir los deseos que guardo para ti, y presiona la luna para recibir un mensaje lleno de amor. 🌟🌙"
+    </p>
+  </div>
+
+  
+  
+
+  <!-- Cielo con estrellas -->
+  <div class="sky">
+    <!-- Estrellas interactivas con frases más largas y románticas -->
+    <div class="star" onclick="showMessage('Eres la estrella que ilumina mi vida, cada día sin ti es oscuro.')">🌟</div>
+    <div class="star" onclick="showMessage('Siempre brillas en mi corazón, incluso cuando no te veo.')">✨</div>
+    <div class="star" onclick="showMessage('Contigo, todo tiene sentido. Eres la razón de mi felicidad.')">🌠</div>
+    <div class="star" onclick="showMessage('Eres mi sueño hecho realidad, la mejor parte de mi vida.')">⭐</div>
+    <div class="star" onclick="showMessage('Mi amor por ti no tiene fin, siempre te amaré más de lo que imaginas.')">🌟</div>
+    <div class="star" onclick="showMessage('Eres la razón por la que sonrío todos los días, mi alegría infinita.')">🌟</div>
+    <div class="star" onclick="showMessage('En cada estrella veo un reflejo de lo hermosa que eres, por dentro y por fuera.')">✨</div>
+    <div class="star" onclick="showMessage('Si pudiera pedir un deseo, pediría pasar toda mi vida a tu lado.')">🌠</div>
+    <div class="star" onclick="showMessage('Tú y yo, juntos, somos una historia de amor perfecta, escrita por las estrellas.')">⭐</div>
+    <div class="star" onclick="showMessage('Eres el sueño que nunca quiero despertar, la persona que me hace sentir completo.')">🌟</div>
+
+    <!-- Luna interactiva -->
+    <div class="moon" onclick="openModal()">
+        🌕
+    </div>
+
+    <!-- Contenedor de mensaje -->
+    <div class="message-container">
+      <p id="message"></p>
+    </div>
+  </div>
+
+  <!-- Modal -->
+<!-- Modal -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2 class="modal-title">Eres la luna que ilumina mi corazón, siempre juntos...</h2>
+      <div class="modal-text-container">
+        <p class="romantic-phrase">
+          Mi amor, cada vez que miro al cielo y veo la luna brillar, no puedo evitar pensar en lo hermosa que eres. Tu luz ilumina mi vida de una manera tan pura y mágica, que no hay palabras suficientes para describir lo que siento por ti. Eres mi sol, mi luna, mi todo. Te prometo que mi amor por ti será tan eterno como las estrellas, y siempre estaré a tu lado, en cada paso que des, para amarte con un amor inmenso, puro y verdadero. 🌙💖
+        </p>
+      </div>
+      <button class="modal-button" onclick="closeModal()">Cerrar</button>
+    </div>
+</div>
+
+
+
+<audio id="music-background" autoplay loop>
+  <source src="music/perfect.mp3" type="audio/mpeg">
+  Tu navegador no soporta la etiqueta de audio.
+</audio>
+
+  <!-- Botón de regreso -->
+  <div class="back-button">
+    <button onclick="window.location.href = 'home.html';">Regresar al Inicio</button>
+  </div>
+  
+
+
+
+  <div class="animated-phrase-container">
+    "Desde que llegaste a mi vida, todo tiene un propósito, cada estrella en el cielo me recuerda lo afortunado que soy de tenerte. En cada resplandor de las estrellas veo tu sonrisa, en cada noche oscura, veo tu luz guiándome. No importa cuánto pase el tiempo, mi amor por ti crece sin medida, y siempre será tan eterno como las estrellas que nos rodean. Eres mi todo, mi vida, mi amor eterno."
+  </div>
+
+  <script src="js/estrellas.js"></script>
+</body>
+</html>
