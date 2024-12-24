@@ -40,8 +40,8 @@ function abrirModal(carpeta) {
     'https://Jhosep24.github.io/Kiara24Jhosep/img/foto10.jpeg',
     ],
     videos: [
-      'https://Jhosep24.github.io/Kiara24Jhosep/videos/video.mp4',
-    'https://Jhosep24.github.io/Kiara24Jhosep/videos/video2.mp4'
+      'https://Jhosep24.github.io/Kiara24Jhosep/img/video.mp4',
+    'https://Jhosep24.github.io/Kiara24Jhosep/img/video2.mp4'
     ]
   };
 
