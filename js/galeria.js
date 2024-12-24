@@ -28,16 +28,16 @@ function abrirModal(carpeta) {
   // Datos simulados (reemplazar con contenido dinámico en backend)
   const contenido = {
     fotos: [
-      '../img/foto1.jpeg',
-      '../img/foto2.jpeg',
-      '../img/foto3.jpeg',
-      '../img/foto6.jpeg',
-      '../img/foto4.jpeg',
-      '../img/foto5.jpeg',
-      '../img/foto7.jpeg',
-      '../img/foto8.jpeg',
-      '../img/foto9.jpeg',
-      '../img/foto10.jpeg',
+    'https://Jhosep24.github.io/Kiara24Jhosep/img/foto1.jpeg',
+    'https://Jhosep24.github.io/Kiara24Jhosep/img/foto2.jpeg',
+    'https://Jhosep24.github.io/Kiara24Jhosep/img/foto3.jpeg',
+    'https://Jhosep24.github.io/Kiara24Jhosep/img/foto6.jpeg',
+    'https://Jhosep24.github.io/Kiara24Jhosep/img/foto4.jpeg',
+    'https://Jhosep24.github.io/Kiara24Jhosep/img/foto5.jpeg',
+    'https://Jhosep24.github.io/Kiara24Jhosep/img/foto7.jpeg',
+    'https://Jhosep24.github.io/Kiara24Jhosep/img/foto8.jpeg',
+    'https://Jhosep24.github.io/Kiara24Jhosep/img/foto9.jpeg',
+    'https://Jhosep24.github.io/Kiara24Jhosep/img/foto10.jpeg',
     ],
     videos: [
       '../img/video.mp4',
